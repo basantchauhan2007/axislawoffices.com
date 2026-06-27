@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axis Law Offices | Leading Law Firm in New Delhi, India</title>
+  <meta name="description" content="Axis Law Offices is a full-service Indian law firm based in New Delhi, specialising in arbitration, commercial litigation, insolvency, banking, and corporate law. Led by Founding Partner Sagar Chauhan.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Axis Law Offices | Leading Law Firm in New Delhi">
+  <meta property="og:description" content="Full-service law firm with expertise in arbitration, commercial litigation, insolvency, banking, corporate, and 10+ practice areas. Pan-India presence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.axislawoffices.com/">
+  <meta property="og:image" content="assets/images/logo.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="manifest" href="site.webmanifest">
+
+  <style>
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 24px 80px;
+    }
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          rgba(176,141,87,0.03) 0px,
+          rgba(176,141,87,0.03) 1px,
+          transparent 1px,
+          transparent 60px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(176,141,87,0.03) 0px,
+          rgba(176,141,87,0.03) 1px,
+          transparent 1px,
+          transparent 60px
+        );
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 820px; }
+    .hero-monogram {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 28px;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    .hero-rule {
+      width: 80px;
+      height: 2px;
+      background: var(--gold);
+      margin: 18px auto;
+    }
+    .hero-tagline {
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: rgba(255,255,255,0.75);
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .hero-sub {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.52);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      z-index: 1;
+      animation: bounce 2.2s infinite;
+    }
+    .hero-scroll span { font-size: 20px; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── Stats strip ── */
+    .stats-bg { background: var(--navy-mid); }
+
+    /* ── Featured practice area cards on homepage ── */
+    .home-practices .practice-card.featured .learn-more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: letter-spacing var(--transition);
+    }
+    .home-practices .practice-card.featured .learn-more:hover { letter-spacing: 2px; }
+
+    /* ── Founder strip ── */
+    .founder-strip {
+      background: var(--navy);
+      padding: 80px 0;
+      overflow: hidden;
+    }
+    .founder-photo-crop {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      display: block;
+    }
+    .founder-strip h2 { color: var(--white); }
+    .founder-strip .section-label { color: var(--gold); }
+    .founder-strip p { color: rgba(255,255,255,0.72); }
+
+    /* ── Client section ── */
+    .client-intro { max-width: 560px; margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+
+<!-- ==============================
+     NAVIGATION
+     ============================== -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Axis Law Offices — Home">
+      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices logo" height="52">
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="team.html" role="menuitem">Our Team</a>
+      <a href="practice-areas.html" role="menuitem">Practice Areas</a>
+      <a href="clients.html" role="menuitem">Clients</a>
+      <a href="contact.html" class="nav-cta" role="menuitem">Contact Us</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <a href="index.html" role="menuitem">Home</a>
+    <a href="about.html" role="menuitem">About</a>
+    <a href="team.html" role="menuitem">Our Team</a>
+    <a href="practice-areas.html" role="menuitem">Practice Areas</a>
+    <a href="clients.html" role="menuitem">Clients</a>
+    <a href="contact.html" class="nav-cta" role="menuitem">Contact Us</a>
+  </div>
+</nav>
+
+<!-- ==============================
+     HERO
+     ============================== -->
+<section class="hero" aria-label="Welcome to Axis Law Offices">
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-content">
+    <!-- Inline monogram SVG — matches exact logo geometry -->
+    <div class="hero-monogram" aria-hidden="true">
+      <svg viewBox="0 0 200 190" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer A -->
+        <line x1="18"  y1="170" x2="100" y2="15"  stroke="#B08D57" stroke-width="9" stroke-linecap="round"/>
+        <line x1="182" y1="170" x2="100" y2="15"  stroke="#B08D57" stroke-width="9" stroke-linecap="round"/>
+        <!-- Inner A -->
+        <line x1="52"  y1="170" x2="100" y2="52"  stroke="#B08D57" stroke-width="9" stroke-linecap="round"/>
+        <line x1="148" y1="170" x2="100" y2="52"  stroke="#B08D57" stroke-width="9" stroke-linecap="round"/>
+        <!-- Crossbar at y=118: inner-left x≈75, inner-right x≈125 -->
+        <line x1="75"  y1="118" x2="125" y2="118" stroke="#B08D57" stroke-width="7.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <p class="hero-eyebrow">Established in New Delhi</p>
+    <h1>AXIS LAW OFFICES</h1>
+    <div class="hero-rule" aria-hidden="true"></div>
+    <p class="hero-tagline">Trusted Legal Counsel. Principled Advocacy.</p>
+    <p class="hero-sub">New Delhi &nbsp;·&nbsp; Pan-India Practice</p>
+    <div class="hero-btns">
+      <a href="practice-areas.html" class="btn btn-primary">Our Practice Areas</a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>&#8595;</span>
+    Scroll
+  </div>
+</section>
+
+<!-- ==============================
+     STATS STRIP
+     ============================== -->
+<div class="stats-bg" role="region" aria-label="Firm at a glance">
+  <div class="container">
+    <div class="stats-strip">
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Years of Practice</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">14</span>
+        <span class="stat-label">Practice Areas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Senior Counsel</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Pan-India</span>
+        <span class="stat-label">Presence</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==============================
+     FIRM INTRO
+     ============================== -->
+<section class="section bg-cream" aria-labelledby="intro-heading">
+  <div class="container text-center">
+    <span class="section-label">Who We Are</span>
+    <h2 class="section-title" id="intro-heading">A Dynamic, Full-Service Law Firm</h2>
+    <div class="gold-rule gold-rule--center" aria-hidden="true"></div>
+    <p class="lead" style="margin: 0 auto;">
+      Axis Law Offices is a results-driven law firm headquartered in New Delhi, offering integrated legal services across all major areas of law. We work in close collaboration with each client, combining deep subject-matter expertise with a practical, solution-oriented approach — delivering legal counsel that is reliable, confidential, and precisely tailored to your business and personal requirements.
+    </p>
+    <div class="mt-40">
+      <a href="about.html" class="btn btn-outline-gold">Learn About the Firm</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     FEATURED PRACTICE AREAS
+     ============================== -->
+<section class="section bg-white home-practices" aria-labelledby="practices-heading">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title" id="practices-heading">Core Practice Areas</h2>
+    <div class="gold-rule" aria-hidden="true"></div>
+    <p class="lead" style="margin-bottom: 44px;">We offer comprehensive legal services across 14 areas of law, with particular depth in the areas below.</p>
+
+    <div class="grid-4" role="list">
+      <div class="practice-card featured" role="listitem">
+        <div class="practice-icon" aria-hidden="true">&#9878;</div>
+        <h3>Arbitration &amp; Dispute Resolution</h3>
+        <p>Domestic and international arbitration, mediation, and enforcement of arbitral awards. Extensive experience representing PSUs and corporates in high-value proceedings.</p>
+        <a href="practice-areas.html#arbitration" class="learn-more" aria-label="Learn more about Arbitration and Dispute Resolution">Learn More &#8594;</a>
+      </div>
+      <div class="practice-card featured" role="listitem">
+        <div class="practice-icon" aria-hidden="true">&#9878;</div>
+        <h3>Civil &amp; Commercial Litigation</h3>
+        <p>End-to-end litigation before the Supreme Court, High Courts, District Courts, and specialised tribunals including NCLT, DRT, TDSAT, NGT, RERA, and CAT.</p>
+        <a href="practice-areas.html#litigation" class="learn-more" aria-label="Learn more about Civil and Commercial Litigation">Learn More &#8594;</a>
+      </div>
+      <div class="practice-card featured" role="listitem">
+        <div class="practice-icon" aria-hidden="true">&#9878;</div>
+        <h3>Insolvency &amp; Bankruptcy</h3>
+        <p>Advisory and representation under the Insolvency and Bankruptcy Code, 2016, covering distressed asset restructuring, debt resolution, and insolvency proceedings before the NCLT.</p>
+        <a href="practice-areas.html#insolvency" class="learn-more" aria-label="Learn more about Insolvency and Bankruptcy">Learn More &#8594;</a>
+      </div>
+      <div class="practice-card featured" role="listitem">
+        <div class="practice-icon" aria-hidden="true">&#9878;</div>
+        <h3>Banking, Finance &amp; Insurance</h3>
+        <p>Banking regulation, securitisation, project finance, loan documentation, DRT/DRAT proceedings, RBI compliance, and insurance coverage disputes.</p>
+        <a href="practice-areas.html#banking" class="learn-more" aria-label="Learn more about Banking Finance and Insurance">Learn More &#8594;</a>
+      </div>
+    </div>
+
+    <div class="text-center mt-40">
+      <a href="practice-areas.html" class="btn btn-outline-gold">View All 14 Practice Areas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     FOUNDER STRIP
+     ============================== -->
+<section class="founder-strip" aria-labelledby="founder-heading">
+  <div class="container">
+    <div class="founder-feature">
+      <div class="founder-img-wrap">
+        <img
+          src="assets/images/sagar-chauhan.png"
+          alt="Sagar Chauhan, Founding Partner of Axis Law Offices"
+          class="founder-photo-crop"
+          loading="lazy"
+        >
+      </div>
+      <div class="founder-info">
+        <span class="section-label">Founding Partner</span>
+        <h2 id="founder-heading">Sagar Chauhan</h2>
+        <div class="gold-rule" aria-hidden="true"></div>
+        <p>
+          Sagar Chauhan brings over a decade of distinguished legal practice with a deep specialisation in Alternate Dispute Resolution, civil and commercial matters, and white-collar crime. He has represented major Public Sector Undertakings — including GAIL (India) Ltd., Power Grid Corporation, and ONGC — in high-stakes arbitration proceedings before national tribunals and courts.
+        </p>
+        <p>
+          A regular practitioner before the Supreme Court of India and the High Court of Delhi, Sagar's approach is client-centric, pragmatic, and solution-oriented — making him a trusted counsel for high-value and sensitive matters across industries.
+        </p>
+        <a href="team.html#sagar-chauhan" class="btn btn-primary" style="margin-top: 8px;">Meet Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     HIGHLIGHT STRIP
+     ============================== -->
+<div class="highlight-strip" role="complementary" aria-label="Firm reach">
+  <div class="container">
+    <p>"Regularly appearing for clients in Delhi, Mumbai, Chandigarh, Lucknow, Gurgaon, and Allahabad."</p>
+    <a href="about.html" class="btn btn-outline-gold" style="border-color: var(--navy); color: var(--navy);">About the Firm</a>
+  </div>
+</div>
+
+<!-- ==============================
+     REPRESENTATIVE CLIENTS
+     ============================== -->
+<section class="section bg-cream" aria-labelledby="clients-heading">
+  <div class="container">
+    <div class="client-intro">
+      <span class="section-label">Who We Serve</span>
+      <h2 class="section-title" id="clients-heading">Representative Clients</h2>
+      <div class="gold-rule" aria-hidden="true"></div>
+      <p>We are privileged to have advised and represented a diverse range of clients spanning public sector undertakings, corporates, multinationals, and individuals.</p>
+    </div>
+
+    <div class="client-grid" role="list" aria-label="List of representative clients">
+      <div class="client-item psu" role="listitem">Power Grid Corporation of India Ltd.</div>
+      <div class="client-item psu" role="listitem">GAIL (India) Limited</div>
+      <div class="client-item psu" role="listitem">Engineers India Limited</div>
+      <div class="client-item psu" role="listitem">Numaligarh Refinery Limited</div>
+      <div class="client-item" role="listitem">The Statesman Limited</div>
+      <div class="client-item" role="listitem">Oravel Stays Pvt. Ltd. (OYO)</div>
+      <div class="client-item" role="listitem">Amplus Solar</div>
+      <div class="client-item" role="listitem">BSES Rajdhani Power Ltd.</div>
+      <div class="client-item" role="listitem">Keltech Infrastructure Ltd.</div>
+      <div class="client-item" role="listitem">Power Teleservices Ltd.</div>
+      <div class="client-item" role="listitem">Tanisha Systems Inc.</div>
+      <div class="client-item" role="listitem">Educomp Solutions Pvt. Ltd.</div>
+    </div>
+
+    <div class="text-center mt-40">
+      <a href="clients.html" class="btn btn-outline-gold">View All Clients</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     CTA BAND
+     ============================== -->
+<section class="section-sm bg-navy text-center" aria-labelledby="cta-heading">
+  <div class="container">
+    <span class="section-label">Get in Touch</span>
+    <h2 class="section-title section-title--white" id="cta-heading">Ready to Discuss Your Matter?</h2>
+    <p style="color:rgba(255,255,255,0.68); max-width:520px; margin: 0 auto 32px;">
+      Contact us to schedule a consultation. We handle matters with the utmost confidentiality and professionalism.
+    </p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      <a href="tel:+918882784312" class="btn btn-outline">+91&nbsp;88827&nbsp;84312</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     FOOTER
+     ============================== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo.svg" alt="Axis Law Offices" class="footer-logo" loading="lazy">
+        <p>A full-service law firm headquartered in New Delhi, committed to delivering principled, client-centric legal counsel across India.</p>
+      </div>
+      <div class="footer-nav">
+        <p class="footer-heading">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="practice-areas.html">Practice Areas</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="footer-contact-col">
+        <p class="footer-heading">Contact</p>
+        <div class="footer-contact-item">
+          <span class="icon" aria-hidden="true">&#9679;</span>
+          <address style="font-style:normal;">
+            <strong style="color:rgba(255,255,255,0.85); display:block; font-size:0.78rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Office</strong>
+            78, National Park, Lajpat Nagar-IV,<br>New Delhi – 110024
+          </address>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon" aria-hidden="true">&#9679;</span>
+          <address style="font-style:normal;">
+            <strong style="color:rgba(255,255,255,0.85); display:block; font-size:0.78rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Chamber</strong>
+            215, S Block, Delhi High Court,<br>New Delhi – 110003
+          </address>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon" aria-hidden="true">&#128222;</span>
+          <a href="tel:+918882784312">+91-8882784312</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon" aria-hidden="true">&#9993;</span>
+          <a href="mailto:legal@axislawoffices.com">legal@axislawoffices.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Axis Law Offices. All rights reserved.</p>
+      <p>Formerly known as Chauhan Law Offices.</p>
+    </div>
+  </div>
+  <p class="footer-disclaimer container">
+    Disclaimer: The information on this website is for general informational purposes only and does not constitute legal advice. Communication through this website does not create an advocate-client relationship. Axis Law Offices is regulated by the Bar Council of India Rules.
+  </p>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top of page">&#8593;</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
