@@ -1,0 +1,12 @@
+{
+  "name": "Axis Law Offices",
+  "short_name": "Axis Law",
+  "description": "Full-service law firm in New Delhi — arbitration, litigation, corporate, insolvency & more.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0E1F3D",
+  "theme_color": "#0E1F3D",
+  "icons": [
+    { "src": "assets/images/logo.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
