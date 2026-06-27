@@ -41,11 +41,11 @@
 
   <!-- LAW OFFICES -->
   <text
-    x="95" y="63"
+    x="95" y="62"
     font-family="'Palatino Linotype','Book Antiqua',Palatino,'Times New Roman',serif"
-    font-size="9"
+    font-size="12"
     fill="#B08D57"
-    letter-spacing="3.5"
+    letter-spacing="4"
     dominant-baseline="middle"
   >LAW OFFICES</text>
 </svg>

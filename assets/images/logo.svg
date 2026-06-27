@@ -1,38 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 282" role="img" aria-label="Axis Law Offices logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 296" role="img" aria-label="Axis Law Offices logo">
   <title>Axis Law Offices</title>
   <desc>Gold double-chevron A monogram above AXIS wordmark on navy background</desc>
 
   <!-- Navy background -->
-  <rect width="240" height="282" fill="#13233F"/>
+  <rect width="240" height="296" fill="#13233F"/>
 
   <!--
-    A MONOGRAM
-    Outer A: wide chevron, apex (120,28), feet (38,158) and (202,158)
-    Inner A: narrower chevron, apex (120,56), feet (72,158) and (168,158)
-    Crossbar connects inner legs at y≈110
-    Both share the same baseline — no bottom line drawn (open chevron style)
+    A MONOGRAM — all coordinates shifted down +14px vs original for top breathing room
+    Outer A: apex (120,42), feet (38,172) and (202,172)
+    Inner A: apex (120,70), feet (72,172) and (168,172)
+    Crossbar at y=124 — same proportional position as before
   -->
 
   <!-- Outer A — left stroke -->
-  <line x1="38"  y1="158" x2="120" y2="28"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="38"  y1="172" x2="120" y2="42"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
   <!-- Outer A — right stroke -->
-  <line x1="202" y1="158" x2="120" y2="28"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="202" y1="172" x2="120" y2="42"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
 
   <!-- Inner A — left stroke -->
-  <line x1="72"  y1="158" x2="120" y2="56"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="72"  y1="172" x2="120" y2="70"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
   <!-- Inner A — right stroke -->
-  <line x1="168" y1="158" x2="120" y2="56"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="168" y1="172" x2="120" y2="70"  stroke="#B08D57" stroke-width="6.5" stroke-linecap="round"/>
 
-  <!--
-    Crossbar at y=110
-    Inner-left at y=110: t=(110-56)/(158-56)=54/102=0.529 → x=120-0.529*(120-72)=120-25.4=94.6≈95
-    Inner-right at y=110: t=0.529 → x=120+0.529*(168-120)=120+25.4=145.4≈145
-  -->
-  <line x1="95"  y1="110" x2="145" y2="110" stroke="#B08D57" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- Crossbar at y=124 (same t=0.529 ratio along inner A legs) -->
+  <line x1="95"  y1="124" x2="145" y2="124" stroke="#B08D57" stroke-width="5.5" stroke-linecap="round"/>
 
-  <!-- AXIS wordmark — using system serif for SVG-as-image compatibility -->
+  <!-- AXIS wordmark -->
   <text
-    x="120" y="193"
+    x="120" y="207"
     font-family="'Palatino Linotype','Book Antiqua',Palatino,'Times New Roman',serif"
     font-size="38"
     font-weight="600"
@@ -43,11 +38,11 @@
   >AXIS</text>
 
   <!-- Thin gold rule -->
-  <line x1="34" y1="202" x2="206" y2="202" stroke="#B08D57" stroke-width="1.1"/>
+  <line x1="34" y1="216" x2="206" y2="216" stroke="#B08D57" stroke-width="1.1"/>
 
   <!-- LAW OFFICES sub-text -->
   <text
-    x="120" y="222"
+    x="120" y="236"
     font-family="'Palatino Linotype','Book Antiqua',Palatino,'Times New Roman',serif"
     font-size="12.5"
     fill="#B08D57"
