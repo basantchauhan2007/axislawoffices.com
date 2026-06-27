@@ -7,14 +7,14 @@
   <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#B08D57" stroke-width="0.5" opacity="0.25"/>
 
   <!-- A Monogram -->
-  <!-- Outer A: apex (196,110), feet (80,380) and (312,380) -->
+  <!-- Outer A: apex (196,110), feet (80,380) and (312,380)  — slope 116/270 = 0.430/unit-y -->
   <line x1="80"  y1="380" x2="196" y2="110" stroke="#B08D57" stroke-width="13" stroke-linecap="round"/>
   <line x1="312" y1="380" x2="196" y2="110" stroke="#B08D57" stroke-width="13" stroke-linecap="round"/>
-  <!-- Inner A: apex (196,180), feet (130,380) and (262,380) -->
-  <line x1="130" y1="380" x2="196" y2="180" stroke="#B08D57" stroke-width="13" stroke-linecap="round"/>
-  <line x1="262" y1="380" x2="196" y2="180" stroke="#B08D57" stroke-width="13" stroke-linecap="round"/>
-  <!-- Crossbar -->
-  <line x1="156" y1="293" x2="236" y2="293" stroke="#B08D57" stroke-width="10" stroke-linecap="round"/>
+  <!-- Inner A: apex (196,226), feet (130,380) and (262,380)  — slope 66/154 = 0.429/unit-y ≈ parallel -->
+  <line x1="130" y1="380" x2="196" y2="226" stroke="#B08D57" stroke-width="13" stroke-linecap="round"/>
+  <line x1="262" y1="380" x2="196" y2="226" stroke="#B08D57" stroke-width="13" stroke-linecap="round"/>
+  <!-- Crossbar at y=308 (47% up inner A from base): left x≈161, right x≈231 -->
+  <line x1="161" y1="308" x2="231" y2="308" stroke="#B08D57" stroke-width="10" stroke-linecap="round"/>
 
   <!-- Vertical separator -->
   <line x1="376" y1="110" x2="376" y2="490" stroke="#B08D57" stroke-width="1.5" opacity="0.45"/>

@@ -6,21 +6,21 @@
 
   <!--
     A monogram scaled to 72px tall, anchored at x≈10–62, centered vertically
-    Outer A: apex (36, 8), feet (10, 62) and (62, 62)
-    Inner A: apex (36, 20), feet (22, 62) and (50, 62)
-    Crossbar at y≈44
-    Inner-left at y=44: t=(44-20)/(62-20)=24/42=0.571 → x=36-0.571*(36-22)=36-8=28
-    Inner-right at y=44: t=0.571 → x=36+0.571*(50-36)=36+8=44
+    Outer A: apex (36, 8),  feet (10, 62) and (62, 62)  — slope 26/54 = 0.481/unit-y
+    Inner A: apex (36, 33), feet (22, 62) and (50, 62)  — slope 14/29 = 0.483/unit-y ≈ parallel
+    Crossbar at y=48 (47% up the inner A from base):
+      left  x = 22 + (62-48)×26/54 = 22 + 6.7 ≈ 29
+      right x = 50 − 6.7 ≈ 43
   -->
 
   <!-- Outer A -->
   <line x1="10" y1="62" x2="36" y2="8"  stroke="#B08D57" stroke-width="4.5" stroke-linecap="round"/>
   <line x1="62" y1="62" x2="36" y2="8"  stroke="#B08D57" stroke-width="4.5" stroke-linecap="round"/>
-  <!-- Inner A -->
-  <line x1="22" y1="62" x2="36" y2="20" stroke="#B08D57" stroke-width="4.5" stroke-linecap="round"/>
-  <line x1="50" y1="62" x2="36" y2="20" stroke="#B08D57" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Inner A — parallel to outer -->
+  <line x1="22" y1="62" x2="36" y2="33" stroke="#B08D57" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="50" y1="62" x2="36" y2="33" stroke="#B08D57" stroke-width="4.5" stroke-linecap="round"/>
   <!-- Crossbar -->
-  <line x1="28" y1="44" x2="44" y2="44" stroke="#B08D57" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="29" y1="48" x2="43" y2="48" stroke="#B08D57" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Thin vertical separator -->
   <line x1="80" y1="14" x2="80" y2="58" stroke="#B08D57" stroke-width="0.7" opacity="0.5"/>
