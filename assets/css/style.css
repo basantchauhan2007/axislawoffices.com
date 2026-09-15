@@ -208,7 +208,7 @@ p:last-child { margin-bottom: 0; }
 /* ---------- Page Hero (inner pages) ---------- */
 .page-hero {
   background: var(--navy);
-  padding: 80px 0 64px;
+  padding: 104px 0 64px;
   text-align: center;
   position: relative;
   overflow: hidden;

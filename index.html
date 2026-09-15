@@ -41,7 +41,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      padding: 120px 24px 80px;
+      padding: 140px 24px 80px;
     }
     .hero-pattern {
       position: absolute;
@@ -143,27 +143,36 @@
     }
     .home-practices .practice-card.featured .learn-more:hover { letter-spacing: 2px; }
 
-    /* ── Founder strip ── */
-    .founder-strip {
-      background: var(--navy);
-      padding: 80px 0;
-      overflow: hidden;
+    /* ── Value proposition ── */
+    .value-prop-intro { max-width: 560px; margin-bottom: 40px; }
+    .value-prop-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
     }
-    .founder-photo-crop {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center top;
+    .value-prop-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
       border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
-      display: block;
+      padding: 32px 30px;
+      transition: box-shadow var(--transition), transform var(--transition);
     }
-    .founder-strip h2 { color: var(--white); }
-    .founder-strip .section-label { color: var(--gold); }
-    .founder-strip p { color: rgba(255,255,255,0.72); }
-
-    /* ── Client section ── */
-    .client-intro { max-width: 560px; margin-bottom: 40px; }
+    .value-prop-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+    .value-prop-card h3 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .value-prop-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .value-prop-grid { grid-template-columns: 1fr; }
+    }
   </style>
 
   <!-- Schema.org structured data for search engines -->
@@ -205,10 +214,11 @@
       "Labour Law", "Tax Litigation", "Real Estate Law", "Intellectual Property"
     ],
     "employee": [
-      {"@type": "Person", "name": "Sagar Chauhan", "jobTitle": "Founding Partner"},
-      {"@type": "Person", "name": "Rohit Kathuria", "jobTitle": "Partner"},
+      {"@type": "Person", "name": "Sagar Chauhan", "jobTitle": "Founding & Managing Partner"},
+      {"@type": "Person", "name": "Rohit Kathuria", "jobTitle": "Senior Partner"},
+      {"@type": "Person", "name": "Sanjay Kumar Yadav", "jobTitle": "Partner"},
       {"@type": "Person", "name": "Dhruv Varma", "jobTitle": "Partner"},
-      {"@type": "Person", "name": "Sanjay Kumar Yadav", "jobTitle": "Partner"}
+      {"@type": "Person", "name": "Abhishek Kamal", "jobTitle": "Principal Associate"}
     ]
   }
   </script>
@@ -217,16 +227,52 @@
 <body>
 
 <!-- ==============================
+     DISCLAIMER GATE
+     Shown on first visit; acceptance is remembered in localStorage.
+     ============================== -->
+<div class="disclaimer-overlay" id="disclaimer-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="disclaimer-heading">
+  <div class="disclaimer-box" id="disclaimer-box">
+    <img src="assets/images/logo.svg" alt="" class="disclaimer-monogram" aria-hidden="true">
+    <h2 id="disclaimer-heading">Disclaimer</h2>
+    <div class="gold-rule" aria-hidden="true"></div>
+    <p>
+      The Indian Bar Council prohibit law firms from advertising and soliciting work through communication in the public domain. This website is meant solely for the purpose of information and not for the purpose of advertising. Axis Law Offices does not intend to solicit clients through this website.
+    </p>
+    <p>
+      Furthermore, this website is for informational purposes only and we do not take responsibility for the decisions taken by the reader based solely on the information provided on the website. For more details on the terms of our website, please ensure that you read our Terms of Use. Please note that once you proceed to the website, we may collect some personal data. For more details, please review our Privacy Policy. Our Privacy Policy details the personal data we collect, why we collect it, how we use it, the measures we take to ensure its security, how we may share information with trusted partners for specific purposes, and how you may exercise your rights in this regard.
+    </p>
+    <p>
+      By clicking on the "I AGREE" button, you specifically agree that the terms of the afore-mentioned i.e. this Disclaimer, the Terms of Use and the Privacy Policy are acceptable to you and that you agree to be bound by them. If you do not agree or are not willing to be bound by the Terms of Use and the Privacy Policy, please do not click on the "I AGREE" button and do not seek to obtain access to or otherwise use the Website.
+    </p>
+    <div class="disclaimer-actions">
+      <button type="button" class="btn btn-primary" id="disclaimer-agree">I Agree</button>
+      <button type="button" class="btn btn-outline-navy" id="disclaimer-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+  /* Runs before paint so the gate never flashes for returning visitors. */
+  (function () {
+    var accepted = false;
+    try { accepted = localStorage.getItem('alo-disclaimer-accepted') === 'yes'; } catch (e) {}
+    if (!accepted) {
+      document.getElementById('disclaimer-overlay').style.display = 'flex';
+      document.documentElement.style.overflow = 'hidden';
+    }
+  })();
+</script>
+
+<!-- ==============================
      NAVIGATION
      ============================== -->
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Axis Law Offices — Home">
-      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices logo" height="52">
+      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices logo" height="72">
     </a>
     <div class="nav-links" role="menubar">
       <a href="index.html" role="menuitem">Home</a>
-      <a href="about.html" role="menuitem">About</a>
+      <a href="about.html" role="menuitem">About Us</a>
       <a href="team.html" role="menuitem">Our Team</a>
       <a href="practice-areas.html" role="menuitem">Practice Areas</a>
       <a href="clients.html" role="menuitem">Clients</a>
@@ -238,7 +284,7 @@
   </div>
   <div class="nav-mobile" id="mobile-menu" role="menu" aria-label="Mobile navigation">
     <a href="index.html" role="menuitem">Home</a>
-    <a href="about.html" role="menuitem">About</a>
+    <a href="about.html" role="menuitem">About Us</a>
     <a href="team.html" role="menuitem">Our Team</a>
     <a href="practice-areas.html" role="menuitem">Practice Areas</a>
     <a href="clients.html" role="menuitem">Clients</a>
@@ -269,11 +315,10 @@
     <p class="hero-eyebrow">Established in New Delhi</p>
     <h1>AXIS LAW OFFICES</h1>
     <div class="hero-rule" aria-hidden="true"></div>
-    <p class="hero-tagline">Trusted Legal Counsel. Principled Advocacy.</p>
-    <p class="hero-sub">New Delhi &nbsp;·&nbsp; Pan-India Practice</p>
+    <p class="hero-tagline">Counsel. Advocacy. Excellence.</p>
+    <p class="hero-sub">New Delhi &nbsp;·&nbsp; Pan-India Legal Representation</p>
     <div class="hero-btns">
       <a href="practice-areas.html" class="btn btn-primary">Our Practice Areas</a>
-      <a href="contact.html" class="btn btn-outline">Contact Us</a>
     </div>
   </div>
   <div class="hero-scroll" aria-hidden="true">
@@ -289,20 +334,20 @@
   <div class="container">
     <div class="stats-strip">
       <div class="stat-item">
+        <span class="stat-number">100+</span>
+        <span class="stat-label">Clients</span>
+      </div>
+      <div class="stat-item">
         <span class="stat-number">10+</span>
-        <span class="stat-label">Years of Practice</span>
+        <span class="stat-label">Years of Experience</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">14</span>
         <span class="stat-label">Practice Areas</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">4</span>
-        <span class="stat-label">Senior Counsel</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">Pan-India</span>
-        <span class="stat-label">Presence</span>
+        <span class="stat-number">10k+</span>
+        <span class="stat-label">Cases</span>
       </div>
     </div>
   </div>
@@ -314,10 +359,16 @@
 <section class="section bg-cream" aria-labelledby="intro-heading">
   <div class="container text-center">
     <span class="section-label">Who We Are</span>
-    <h2 class="section-title" id="intro-heading">A Dynamic, Full-Service Law Firm</h2>
+    <h2 class="section-title" id="intro-heading">One Firm. Complete Legal Solutions.</h2>
     <div class="gold-rule gold-rule--center" aria-hidden="true"></div>
     <p class="lead" style="margin: 0 auto;">
-      Axis Law Offices is a results-driven law firm headquartered in New Delhi, offering integrated legal services across all major areas of law. We work in close collaboration with each client, combining deep subject-matter expertise with a practical, solution-oriented approach — delivering legal counsel that is reliable, confidential, and precisely tailored to your business and personal requirements.
+      Axis Law Offices is a full-service law firm headquartered in New Delhi, providing legal, advisory and dispute-resolution services across 14 areas of practice.
+    </p>
+    <p class="lead" style="margin: 1rem auto 0;">
+      The Firm advises and represents corporates, institutions, entrepreneurs and individuals across a wide range of sectors and legal requirements, with its practice encompassing Arbitration &amp; Dispute Resolution; Banking, Finance &amp; Insurance; Intellectual Property Laws; Broadcasting, Telecom &amp; Media Laws; Competition Law; Corporate &amp; Commercial; Electricity &amp; Energy Laws; Environment Laws; Insolvency &amp; Bankruptcy; Labour &amp; Employment Laws; Civil, Commercial &amp; Criminal Litigation; Mergers &amp; Acquisitions; Property &amp; Real Estate; and Tax Litigation.
+    </p>
+    <p class="lead" style="margin: 1rem auto 0;">
+      The breadth of the Firm's practice enables it to provide clients with integrated legal advice, combining sector-specific understanding with a practical and commercially conscious approach.
     </p>
     <div class="mt-40">
       <a href="about.html" class="btn btn-outline-gold">Learn About the Firm</a>
@@ -350,50 +401,20 @@
       </div>
       <div class="practice-card featured" role="listitem">
         <div class="practice-icon" aria-hidden="true">&#9878;</div>
-        <h3>Insolvency &amp; Bankruptcy</h3>
-        <p>Advisory and representation under the Insolvency and Bankruptcy Code, 2016, covering distressed asset restructuring, debt resolution, and insolvency proceedings before the NCLT.</p>
-        <a href="practice-areas.html#insolvency" class="learn-more" aria-label="Learn more about Insolvency and Bankruptcy">Learn More &#8594;</a>
+        <h3>Intellectual Property Laws</h3>
+        <p>Strategic advice and representation relating to trademarks, copyrights, patents, designs, geographical indications, trade secrets and others. Assisting businesses in protecting, enforcing, commercialising, and defending their intellectual assets, including IP prosecution, infringement disputes, licensing, and related litigation.</p>
+        <a href="practice-areas.html#intellectual-property" class="learn-more" aria-label="Learn more about Intellectual Property Laws">Learn More &#8594;</a>
       </div>
       <div class="practice-card featured" role="listitem">
         <div class="practice-icon" aria-hidden="true">&#9878;</div>
-        <h3>Banking, Finance &amp; Insurance</h3>
-        <p>Banking regulation, securitisation, project finance, loan documentation, DRT/DRAT proceedings, RBI compliance, and insurance coverage disputes.</p>
-        <a href="practice-areas.html#banking" class="learn-more" aria-label="Learn more about Banking Finance and Insurance">Learn More &#8594;</a>
+        <h3>Insolvency &amp; Bankruptcy</h3>
+        <p>Advisory and representation under the Insolvency and Bankruptcy Code, 2016, covering distressed asset restructuring, debt resolution, and insolvency proceedings before the NCLT.</p>
+        <a href="practice-areas.html#insolvency" class="learn-more" aria-label="Learn more about Insolvency and Bankruptcy">Learn More &#8594;</a>
       </div>
     </div>
 
     <div class="text-center mt-40">
       <a href="practice-areas.html" class="btn btn-outline-gold">View All 14 Practice Areas</a>
-    </div>
-  </div>
-</section>
-
-<!-- ==============================
-     FOUNDER STRIP
-     ============================== -->
-<section class="founder-strip" aria-labelledby="founder-heading">
-  <div class="container">
-    <div class="founder-feature">
-      <div class="founder-img-wrap">
-        <img
-          src="assets/images/sagar-chauhan.png"
-          alt="Sagar Chauhan, Founding Partner of Axis Law Offices"
-          class="founder-photo-crop"
-          loading="lazy"
-        >
-      </div>
-      <div class="founder-info">
-        <span class="section-label">Founding Partner</span>
-        <h2 id="founder-heading">Sagar Chauhan</h2>
-        <div class="gold-rule" aria-hidden="true"></div>
-        <p>
-          Sagar Chauhan brings over a decade of distinguished legal practice with a deep specialisation in Alternate Dispute Resolution, civil and commercial matters, and white-collar crime. He has represented major Public Sector Undertakings — including GAIL (India) Ltd., Power Grid Corporation, and ONGC — in high-stakes arbitration proceedings before national tribunals and courts.
-        </p>
-        <p>
-          A regular practitioner before the Supreme Court of India and the High Court of Delhi, Sagar's approach is client-centric, pragmatic, and solution-oriented — making him a trusted counsel for high-value and sensitive matters across industries.
-        </p>
-        <a href="team.html#sagar-chauhan" class="btn btn-primary" style="margin-top: 8px;">Meet Our Team</a>
-      </div>
     </div>
   </div>
 </section>
@@ -409,34 +430,33 @@
 </div>
 
 <!-- ==============================
-     REPRESENTATIVE CLIENTS
+     VALUE PROPOSITION
      ============================== -->
-<section class="section bg-cream" aria-labelledby="clients-heading">
+<section class="section bg-cream" aria-labelledby="value-prop-heading">
   <div class="container">
-    <div class="client-intro">
-      <span class="section-label">Who We Serve</span>
-      <h2 class="section-title" id="clients-heading">Representative Clients</h2>
+    <div class="value-prop-intro">
+      <span class="section-label">Why Work With Us</span>
+      <h2 class="section-title" id="value-prop-heading">Our Value Proposition</h2>
       <div class="gold-rule" aria-hidden="true"></div>
-      <p>We are privileged to have advised and represented a diverse range of clients spanning public sector undertakings, corporates, multinationals, and individuals.</p>
     </div>
 
-    <div class="client-grid" role="list" aria-label="List of representative clients">
-      <div class="client-item psu" role="listitem">Power Grid Corporation of India Ltd.</div>
-      <div class="client-item psu" role="listitem">GAIL (India) Limited</div>
-      <div class="client-item psu" role="listitem">Engineers India Limited</div>
-      <div class="client-item psu" role="listitem">Numaligarh Refinery Limited</div>
-      <div class="client-item" role="listitem">The Statesman Limited</div>
-      <div class="client-item" role="listitem">Oravel Stays Pvt. Ltd. (OYO)</div>
-      <div class="client-item" role="listitem">Amplus Solar</div>
-      <div class="client-item" role="listitem">BSES Rajdhani Power Ltd.</div>
-      <div class="client-item" role="listitem">Keltech Infrastructure Ltd.</div>
-      <div class="client-item" role="listitem">Power Teleservices Ltd.</div>
-      <div class="client-item" role="listitem">Tanisha Systems Inc.</div>
-      <div class="client-item" role="listitem">Educomp Solutions Pvt. Ltd.</div>
-    </div>
-
-    <div class="text-center mt-40">
-      <a href="clients.html" class="btn btn-outline-gold">View All Clients</a>
+    <div class="value-prop-grid" role="list">
+      <div class="value-prop-card" role="listitem">
+        <h3>Responsive &amp; Timely Service</h3>
+        <p>We understand that legal matters often require timely decisions and swift action. Our team brings extensive experience in handling Corporate and Intellectual Property matters for businesses ranging from emerging start-ups to established multinational corporations. We combine legal expertise with a proactive approach to ensure that our clients receive efficient, responsive and dependable support at every stage.</p>
+      </div>
+      <div class="value-prop-card" role="listitem">
+        <h3>Experienced Legal Professionals</h3>
+        <p>Our Firm brings together professionals with diverse legal and industry backgrounds, each offering specialized knowledge and practical insight. With a strong understanding of the Indian Corporate and Intellectual Property legal framework, we provide solutions that are both legally sound and commercially relevant.</p>
+      </div>
+      <div class="value-prop-card" role="listitem">
+        <h3>Transparent &amp; Flexible Pricing</h3>
+        <p>We believe quality legal services should be supported by a clear and practical approach to fees. As a comprehensive legal partner for Corporate and Intellectual Property matters, we offer competitive and flexible fee.</p>
+      </div>
+      <div class="value-prop-card" role="listitem">
+        <h3>Concise &amp; Strategic Advice</h3>
+        <p>We believe effective legal advice should be clear, practical and focused on the issue at hand. Our team takes the time to understand each client's objectives and provides straightforward, commercially sound advice without unnecessary complexity. By combining legal expertise with a practical understanding of our clients' businesses, we help them navigate complex legal matters with clarity and confidence.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -453,7 +473,6 @@
     </p>
     <div class="hero-btns">
       <a href="contact.html" class="btn btn-primary">Contact Us</a>
-      <a href="tel:+918882784312" class="btn btn-outline">+91&nbsp;88827&nbsp;84312</a>
     </div>
   </div>
 </section>
@@ -466,7 +485,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/images/logo.svg" alt="Axis Law Offices" class="footer-logo" loading="lazy">
-        <p>A full-service law firm headquartered in New Delhi, committed to delivering principled, client-centric legal counsel across India.</p>
+        <p>Headquartered in New Delhi, we are a full-service law firm committed to providing principled, strategic and commercially astute legal counsel, tailored to the evolving needs of our clients across India.</p>
       </div>
       <div class="footer-nav">
         <p class="footer-heading">Quick Links</p>

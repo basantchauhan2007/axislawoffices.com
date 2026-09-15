@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team | Axis Law Offices</title>
-  <meta name="description" content="Meet the legal team at Axis Law Offices — Founding Partner Sagar Chauhan and Partners Rohit Kathuria, Dhruv Varma, and Sanjay Kumar Yadav.">
+  <meta name="description" content="Meet the legal team at Axis Law Offices — Founding &amp; Managing Partner Sagar Chauhan, Senior Partner Rohit Kathuria, Partners Sanjay Kumar Yadav and Dhruv Varma, and Principal Associate Abhishek Kamal.">
   <meta property="og:title" content="Our Team — Axis Law Offices">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.axislawoffices.com/team.html">
-  <meta property="og:description" content="Meet the legal team at Axis Law Offices — Founding Partner Sagar Chauhan and Partners Rohit Kathuria, Dhruv Varma, and Sanjay Kumar Yadav.">
+  <meta property="og:description" content="Meet the legal team at Axis Law Offices — Founding &amp; Managing Partner Sagar Chauhan, Senior Partner Rohit Kathuria, Partners Sanjay Kumar Yadav and Dhruv Varma, and Principal Associate Abhishek Kamal.">
   <meta property="og:image" content="https://www.axislawoffices.com/assets/images/og-image.png">
   <meta name="google-site-verification" content="P93_I5XcGip1ZYVR0rBOwzYZ3Yh3n7kT1pCF7isnG9s">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,85 +21,76 @@
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
   <style>
-    .founder-photo-crop {
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: var(--radius);
-      display: block;
-    }
-    .team-partners-grid {
+    .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-top: 56px;
+      gap: 32px;
+      margin-top: 52px;
     }
-    @media(max-width: 768px) {
-      .team-partners-grid { grid-template-columns: 1fr; }
-    }
-    .partner-card {
+    @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .team-grid { grid-template-columns: 1fr; } }
+
+    .team-member {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
     }
-    .partner-photo {
+    .team-member:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+    .team-member-photo {
       width: 100%;
-      height: 240px;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center top;
+      background: var(--cream);
       display: block;
     }
-    .partner-card-top {
-      background: var(--navy);
-      padding: 36px 28px 28px;
+    .team-member-body {
+      padding: 24px 26px 26px;
+      text-align: center;
       display: flex;
-      align-items: center;
-      gap: 20px;
+      flex-direction: column;
+      flex: 1;
     }
-    .partner-initials {
-      width: 64px;
-      height: 64px;
-      background: rgba(176,141,87,0.15);
-      border: 2px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      color: var(--gold);
-      flex-shrink: 0;
+    .team-member-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 6px;
     }
-    .partner-card-top h3 { color: var(--white); margin-bottom: 4px; font-size: 1.1rem; }
-    .partner-card-top .role { color: var(--gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-    .partner-card-body { padding: 24px 28px; }
-    .partner-card-body p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 10px; }
-    .partner-card-body p:last-child { margin-bottom: 0; }
-    .partner-meta {
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-    .partner-meta-item {
-      display: flex;
-      gap: 10px;
-      font-size: 0.8rem;
-      color: var(--text-mid);
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
-    .partner-meta-item:last-child { margin-bottom: 0; }
-    .partner-meta-label {
-      color: var(--gold);
-      font-weight: 700;
+    .team-member-role {
+      font-family: var(--font-body);
       font-size: 0.72rem;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
-      min-width: 72px;
-      padding-top: 1px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
     }
+    .team-member-bar {
+      width: 36px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 18px;
+    }
+    .team-member-link {
+      margin-top: auto;
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--navy);
+      transition: color var(--transition), letter-spacing var(--transition);
+    }
+    .team-member-link:hover { color: var(--gold); letter-spacing: 2.2px; }
   </style>
 </head>
 <body>
@@ -108,11 +99,11 @@
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Axis Law Offices — Home">
-      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices" height="52">
+      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices" height="72">
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="team.html" class="active">Our Team</a>
       <a href="practice-areas.html">Practice Areas</a>
       <a href="clients.html">Clients</a>
@@ -124,7 +115,7 @@
   </div>
   <div class="nav-mobile" id="mobile-menu">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">About Us</a>
     <a href="team.html">Our Team</a>
     <a href="practice-areas.html">Practice Areas</a>
     <a href="clients.html">Clients</a>
@@ -143,169 +134,69 @@
   </div>
 </header>
 
-<!-- ── FOUNDING PARTNER ── -->
-<section class="section bg-white" id="sagar-chauhan" aria-labelledby="founder-name">
+<!-- ── TEAM ── -->
+<section class="section bg-cream" aria-labelledby="team-heading">
   <div class="container">
-    <div class="text-center" style="margin-bottom: 52px;">
-      <span class="section-label">Leadership</span>
-      <h2 id="founder-heading">Founding Partner</h2>
-      <div class="gold-rule gold-rule--center" aria-hidden="true"></div>
-    </div>
-
-    <div class="founder-feature">
-      <div class="founder-img-wrap">
-        <img
-          src="assets/images/sagar-chauhan.png"
-          alt="Sagar Chauhan, Founding Partner — Axis Law Offices"
-          class="founder-photo-crop"
-          loading="eager"
-        >
-      </div>
-
-      <div class="founder-info">
-        <span class="role-tag">Founding Partner</span>
-        <h2 id="founder-name" style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Sagar Chauhan</h2>
-        <p style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 20px;">Advocate</p>
-        <div class="gold-rule" aria-hidden="true"></div>
-
-        <p>
-          Sagar Chauhan is the Founding Partner of Axis Law Offices, with over ten years of experience in the legal profession. His practice is anchored in civil, commercial, and white-collar crime matters, with a particular specialisation in Alternate Dispute Resolution (ADR) — an area in which he has built a strong national reputation.
-        </p>
-        <p>
-          He advises and represents clients on matters spanning consumer laws, banking laws, insurance laws, commercial laws, civil laws, and insolvency and bankruptcy proceedings. He has handled complex, high-stakes commercial arbitrations on behalf of major Public Sector Undertakings including GAIL (India) Ltd., Power Grid Corporation of India Ltd., and Oil and Natural Gas Corporation — and is currently an empanelled advocate for Power Grid Corporation of India.
-        </p>
-        <p>
-          Sagar is well-versed in cyber law, holding a Certificate Course in Cyber Law from the Indian Law Institute (ILI). He has also provided contract management services to a multinational corporation, demonstrating fluency in the intersection of law and business operations.
-        </p>
-        <p>
-          He regularly appears before the Hon'ble Supreme Court of India and the High Court of Delhi, as well as before the Debt Recovery Tribunal (DRT), Debt Recovery Appellate Tribunal (DRAT), National Company Law Tribunal (NCLT), Telecom Disputes Settlement and Appellate Tribunal (TDSAT), and the National Green Tribunal (NGT).
-        </p>
-        <p>
-          His approach is client-centric, pragmatic, and solution-oriented — making him a trusted advisor in high-value and sensitive matters across industries.
-        </p>
-
-        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
-          <div class="partner-meta-item">
-            <span class="partner-meta-label">Courts</span>
-            <span>Supreme Court of India; High Court of Delhi; DRT; DRAT; NCLT; TDSAT; NGT</span>
-          </div>
-          <div class="partner-meta-item" style="margin-top: 10px;">
-            <span class="partner-meta-label">Education</span>
-            <span>Certificate Course in Cyber Law, Indian Law Institute (ILI)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── PARTNERS ── -->
-<section class="section bg-cream" aria-labelledby="partners-heading">
-  <div class="container">
-    <div class="text-center" style="margin-bottom: 12px;">
+    <div class="text-center" style="max-width: 660px; margin: 0 auto;">
       <span class="section-label">The Team</span>
-      <h2 id="partners-heading">Our Partners</h2>
+      <h2 id="team-heading">Our People</h2>
       <div class="gold-rule gold-rule--center" aria-hidden="true"></div>
+      <p class="lead" style="margin: 0 auto;">
+        Our Partners and Associates bring together experience across civil, commercial, criminal, regulatory and specialised areas of legal practice.
+      </p>
     </div>
 
-    <div class="team-partners-grid" role="list">
-
-      <!-- Rohit Kathuria -->
-      <article class="partner-card" id="rohit-kathuria" role="listitem">
-        <img src="assets/images/rohit-kathuria.png" alt="Rohit Kathuria, Partner — Axis Law Offices" class="partner-photo" loading="lazy">
-        <div class="partner-card-top">
-          <div>
-            <h3>Rohit Kathuria</h3>
-            <span class="role">Partner</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <p>
-            A graduate of Amity Law School, Noida, Rohit has been practising law since 2015. He has appeared before all forums and courts in Delhi NCR and gained deep knowledge of procedural law as a Legal Researcher for Hon'ble Justice Valmiki Mehta at the Delhi High Court.
-          </p>
-          <p>
-            He has worked with the Standing Counsel of the Government of NCT of Delhi, representing the Delhi Government in high-profile state matters before the Delhi High Court and the Supreme Court of India. He has also served as legal counsel with the Delhi High Court Arbitration Centre (DHCAC) and has been appointed Local Commissioner in various matters by the Delhi High Court.
-          </p>
-          <p>
-            Rohit holds an integrated B.Com LL.B (Hons.) degree and brings strong expertise in business and financial legal matters. He previously worked with O.P. Khaitan &amp; Co. and Remfry &amp; Sagar. He also holds a Diploma in Cyber Law and handles cyber-crime related matters.
-          </p>
-          <div class="partner-meta">
-            <div class="partner-meta-item">
-              <span class="partner-meta-label">Courts</span>
-              <span>All forums in Delhi NCR; Delhi High Court; Supreme Court of India</span>
-            </div>
-            <div class="partner-meta-item">
-              <span class="partner-meta-label">Education</span>
-              <span>B.Com LL.B (Hons.), Amity Law School; Diploma in Cyber Law</span>
-            </div>
-          </div>
+    <div class="team-grid" role="list">
+      <article class="team-member" id="sagar-chauhan" role="listitem">
+        <img src="assets/images/team-sagar-chauhan.jpg" alt="Sagar Chauhan, Founding & Managing Partner — Axis Law Offices" class="team-member-photo" loading="lazy" width="800" height="1000">
+        <div class="team-member-body">
+          <h3 class="team-member-name">Sagar Chauhan</h3>
+          <span class="team-member-role">Founding &amp; Managing Partner</span>
+          <div class="team-member-bar" aria-hidden="true"></div>
+          <a href="sagar-chauhan.html" class="team-member-link" aria-label="Read more about Sagar Chauhan">Read More &#8594;</a>
         </div>
       </article>
 
-      <!-- Dhruv Varma -->
-      <article class="partner-card" id="dhruv-varma" role="listitem">
-        <img src="assets/images/dhruv-varma.png" alt="Dhruv Varma, Partner — Axis Law Offices" class="partner-photo" loading="lazy">
-        <div class="partner-card-top">
-          <div>
-            <h3>Dhruv Varma</h3>
-            <span class="role">Partner</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <p>
-            A graduate of Amity Law School, Noida, Dhruv has been practising law since 2018 with extensive experience in commercial litigation and arbitration before various fora. His primary focus is dispute resolution in commercial, banking, electricity, and consumer matters.
-          </p>
-          <p>
-            He has handled disputes across diverse industry sectors involving arbitration law, contract law, and company law, and has conducted due diligence for banks, companies, commercial contracts, and arbitration agreements.
-          </p>
-          <p>
-            Prior to joining the firm, Dhruv worked with Madan &amp; Associates and with Senior Advocate Sushil Kumar Jain, gaining rich experience under eminent judges and senior advocates of the Supreme Court of India and the High Court of Delhi.
-          </p>
-          <div class="partner-meta">
-            <div class="partner-meta-item">
-              <span class="partner-meta-label">Courts</span>
-              <span>Supreme Court of India; High Court of Delhi; Commercial and arbitral tribunals</span>
-            </div>
-            <div class="partner-meta-item">
-              <span class="partner-meta-label">Education</span>
-              <span>LL.B, Amity Law School, Noida</span>
-            </div>
-          </div>
+      <article class="team-member" id="rohit-kathuria" role="listitem">
+        <img src="assets/images/team-rohit-kathuria.jpg" alt="Rohit Kathuria, Senior Partner — Axis Law Offices" class="team-member-photo" loading="lazy" width="800" height="1000">
+        <div class="team-member-body">
+          <h3 class="team-member-name">Rohit Kathuria</h3>
+          <span class="team-member-role">Senior Partner</span>
+          <div class="team-member-bar" aria-hidden="true"></div>
+          <a href="rohit-kathuria.html" class="team-member-link" aria-label="Read more about Rohit Kathuria">Read More &#8594;</a>
         </div>
       </article>
 
-      <!-- Sanjay Kumar Yadav -->
-      <article class="partner-card" id="sanjay-kumar-yadav" role="listitem">
-        <img src="assets/images/sanjay-yadav.png" alt="Sanjay Kumar Yadav, Partner — Axis Law Offices" class="partner-photo" loading="lazy">
-        <div class="partner-card-top">
-          <div>
-            <h3>Sanjay Kumar Yadav</h3>
-            <span class="role">Partner</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <p>
-            Sanjay Kumar Yadav has over five years of legal practice, primarily across writ jurisdiction, civil jurisdiction, criminal jurisdiction, consumer laws, service laws, and labour laws.
-          </p>
-          <p>
-            He currently handles consumer litigation, labour law matters, civil suits, and criminal proceedings across a wide range of forums in and around Delhi. He is empanelled with BSES Rajdhani Power Ltd. and Apollo Hospital (Sarita Vihar branch).
-          </p>
-          <div class="partner-meta">
-            <div class="partner-meta-item">
-              <span class="partner-meta-label">Courts</span>
-              <span>High Court of Delhi; District Courts (Patiala House, Tis Hazari, Saket, Karkardooma, Dwarka, Rohini); NCLT; NCDRC/SCDRC; CAT; RERA</span>
-            </div>
-            <div class="partner-meta-item">
-              <span class="partner-meta-label">Panels</span>
-              <span>BSES Rajdhani Power Ltd.; Apollo Hospital (Sarita Vihar)</span>
-            </div>
-          </div>
+      <article class="team-member" id="sanjay-kumar-yadav" role="listitem">
+        <img src="assets/images/team-sanjay-kumar-yadav.jpg" alt="Sanjay Kumar Yadav, Partner — Axis Law Offices" class="team-member-photo" loading="lazy" width="800" height="1000">
+        <div class="team-member-body">
+          <h3 class="team-member-name">Sanjay Kumar Yadav</h3>
+          <span class="team-member-role">Partner</span>
+          <div class="team-member-bar" aria-hidden="true"></div>
+          <a href="sanjay-kumar-yadav.html" class="team-member-link" aria-label="Read more about Sanjay Kumar Yadav">Read More &#8594;</a>
         </div>
       </article>
 
+      <article class="team-member" id="dhruv-varma" role="listitem">
+        <img src="assets/images/team-dhruv-varma.jpg" alt="Dhruv Varma, Partner — Axis Law Offices" class="team-member-photo" loading="lazy" width="800" height="1000">
+        <div class="team-member-body">
+          <h3 class="team-member-name">Dhruv Varma</h3>
+          <span class="team-member-role">Partner</span>
+          <div class="team-member-bar" aria-hidden="true"></div>
+          <a href="dhruv-varma.html" class="team-member-link" aria-label="Read more about Dhruv Varma">Read More &#8594;</a>
+        </div>
+      </article>
+
+      <article class="team-member" id="abhishek-kamal" role="listitem">
+        <img src="assets/images/team-abhishek-kamal.jpg" alt="Abhishek Kamal, Principal Associate — Axis Law Offices" class="team-member-photo" loading="lazy" width="800" height="1000">
+        <div class="team-member-body">
+          <h3 class="team-member-name">Abhishek Kamal</h3>
+          <span class="team-member-role">Principal Associate</span>
+          <div class="team-member-bar" aria-hidden="true"></div>
+          <a href="abhishek-kamal.html" class="team-member-link" aria-label="Read more about Abhishek Kamal">Read More &#8594;</a>
+        </div>
+      </article>
     </div>
-    <!-- End partners grid -->
-    <!-- NOTE FOR FIRM: To add a new team member, add a new <article class="partner-card"> block above following the same structure. -->
   </div>
 </section>
 
@@ -326,7 +217,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/images/logo.svg" alt="Axis Law Offices" class="footer-logo" loading="lazy">
-        <p>A full-service law firm headquartered in New Delhi, committed to delivering principled, client-centric legal counsel across India.</p>
+        <p>Headquartered in New Delhi, we are a full-service law firm committed to providing principled, strategic and commercially astute legal counsel, tailored to the evolving needs of our clients across India.</p>
       </div>
       <div class="footer-nav">
         <p class="footer-heading">Quick Links</p>

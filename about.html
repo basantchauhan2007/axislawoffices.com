@@ -19,6 +19,51 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
   <link rel="icon" type="image/png" href="assets/images/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <style>
+    /* ── Long-form prose blocks (Introduction / Our History) ── */
+    .prose-block { max-width: 860px; margin: 0 auto; }
+    .prose-block p { font-size: 1rem; line-height: 1.85; }
+    .prose-divider {
+      width: 100%;
+      max-width: 860px;
+      height: 1px;
+      background: var(--border);
+      margin: 52px auto;
+    }
+
+    /* ── Firm pull-quote panel ── */
+    .firm-quote {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 860px;
+      margin: 56px auto 0;
+    }
+    .firm-quote img { width: 150px; margin: 0 auto 24px; }
+    .firm-quote p {
+      color: rgba(255,255,255,0.72);
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ── Why Choose Us grid (2 × 2) ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .firm-quote { padding: 36px 24px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,11 +71,11 @@
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Axis Law Offices — Home">
-      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices" height="52">
+      <img src="assets/images/logo-horizontal.svg" alt="Axis Law Offices" height="72">
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html" class="active">About Us</a>
       <a href="team.html">Our Team</a>
       <a href="practice-areas.html">Practice Areas</a>
       <a href="clients.html">Clients</a>
@@ -42,7 +87,7 @@
   </div>
   <div class="nav-mobile" id="mobile-menu">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">About Us</a>
     <a href="team.html">Our Team</a>
     <a href="practice-areas.html">Practice Areas</a>
     <a href="clients.html">Clients</a>
@@ -64,28 +109,64 @@
 <!-- FIRM OVERVIEW -->
 <section class="section bg-white" aria-labelledby="overview-heading">
   <div class="container">
-    <div class="grid-2" style="gap: 64px; align-items: center;">
-      <div>
-        <span class="section-label">Our Story</span>
-        <h2 id="overview-heading">From Chauhan Law Offices to Axis Law Offices</h2>
-        <div class="gold-rule" aria-hidden="true"></div>
-        <p>
-          Axis Law Offices was founded by Sagar Chauhan, Advocate, and carries forward the legacy and track record of Chauhan Law Offices — a firm he established and built over a decade of rigorous legal practice in New Delhi. The rebrand to Axis Law Offices reflects the firm's growth, its expanding team of senior counsel, and its ambition to provide integrated, full-service legal representation across India.
-        </p>
-        <p>
-          The continuity of the firm's history, its client relationships, its courtroom experience, and its professional reputation are fully preserved. Every mandate won under the Chauhan Law Offices banner is part of the same team's story — now operating under the Axis Law Offices identity.
-        </p>
-        <p>
-          Today, the firm is led by Founding Partner Sagar Chauhan alongside Partners Rohit Kathuria, Dhruv Varma, and Sanjay Kumar Yadav — a team that collectively covers the full spectrum of civil, commercial, criminal, constitutional, and regulatory legal work.
-        </p>
-      </div>
-      <div style="background: var(--navy); border-radius: 4px; padding: 48px 40px; text-align: center;">
-        <img src="assets/images/logo.svg" alt="Axis Law Offices logo" style="width: 160px; margin: 0 auto 24px;" loading="lazy">
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.88rem; font-style: italic; margin: 0;">
-          "Dedicated to delivering the best possible legal solutions,<br>individually tailored to each client's requirements."
-        </p>
-      </div>
+
+    <!-- Introduction -->
+    <div class="prose-block">
+      <span class="section-label">Introduction</span>
+      <h2 id="overview-heading">A Full-Service Law Firm Headquartered in New Delhi</h2>
+      <div class="gold-rule" aria-hidden="true"></div>
+      <p>
+        Axis Law Offices is a full-service law firm headquartered in New Delhi, providing legal, advisory and dispute-resolution services across 14 areas of practice. The Firm advises and represents corporates, institutions, entrepreneurs and individuals across a wide range of sectors and legal requirements, with its practice encompassing Arbitration &amp; Dispute Resolution; Banking, Finance &amp; Insurance; Broadcasting, Telecom &amp; Media Laws; Competition Law; Corporate &amp; Commercial; Electricity &amp; Energy Laws; Environment Laws; Intellectual Property Laws; Insolvency &amp; Bankruptcy; Labour &amp; Employment Laws; Civil, Commercial &amp; Criminal Litigation; Mergers &amp; Acquisitions; Property &amp; Real Estate; and Tax Litigation.
+      </p>
+      <p>
+        The breadth of the Firm's practice enables it to provide clients with integrated legal advice, combining sector-specific understanding with a practical and commercially conscious approach.
+      </p>
+      <p>
+        Among its areas of particular strength, Arbitration &amp; Dispute Resolution forms a significant part of the Firm's practice, with experience in domestic and international arbitration, mediation and conciliation, enforcement and challenge of arbitral awards, arbitration-related proceedings before the High Courts and the Supreme Court, and the drafting of arbitration agreements and clauses. The Firm represents public sector undertakings, government bodies and private enterprises in complex and high-value disputes.
+      </p>
+      <p>
+        The Firm also has a strong Intellectual Property Law practice, advising clients across patents, trademarks, copyright, designs and geographical indications. Its work extends from IP prosecution and registration to licensing and assignment, enforcement and infringement actions and representation before Intellectual Property Offices and various Indian Courts. The Firm's IP practice is complemented by its broader corporate, commercial and dispute-resolution capabilities, enabling it to advise clients not only on securing and managing intellectual property rights but also on their commercial exploitation and enforcement.
+      </p>
+      <p>
+        Another core area of the Firm's practice is Banking, Finance &amp; Insurance, where it advises on banking regulation and compliance, securitisation, project and acquisition finance, derivatives, corporate restructuring, loan and security documentation, proceedings under the SARFAESI Act before the DRT and DRAT, RBI compliance and insurance and reinsurance coverage disputes. This practice enables the Firm to advise financial institutions, corporates and other stakeholders on both transactional and contentious aspects of financial and regulatory matters.
+      </p>
+      <p>
+        Across its practice areas, Axis Law Offices places emphasis on clear legal advice, responsiveness, attention to detail and practical solutions. The Firm works closely with its clients to understand their objectives and provide advice that is tailored to the particular legal, commercial and strategic considerations of each matter.
+      </p>
     </div>
+
+    <div class="prose-divider" aria-hidden="true"></div>
+
+    <!-- Our History -->
+    <div class="prose-block">
+      <span class="section-label">Our History</span>
+      <h2 id="history-heading">From Chauhan Law Offices to Axis Law Offices</h2>
+      <div class="gold-rule" aria-hidden="true"></div>
+      <p>
+        Axis Law Offices was founded by Sagar Chauhan, Advocate, and carries forward the legacy, experience and professional track record of Chauhan Law Offices, which he established and built over more than a decade of legal practice in New Delhi. The transition to Axis Law Offices marks the Firm's continued growth, the expansion of its team and capabilities, and its evolution into a broader, full-service law firm serving clients across diverse areas of law and across India.
+      </p>
+      <p>
+        The Firm's history, client relationships, courtroom experience and professional values remain at the heart of Axis Law Offices. The work undertaken and relationships developed under the Chauhan Law Offices name continue as an integral part of the Firm's journey. Axis Law Offices builds on this foundation with a wider range of legal capabilities and a growing team of professionals committed to providing practical, responsive and well-considered legal advice and representation.
+      </p>
+      <p>
+        Today, Axis Law Offices advises and represents clients across 14 areas of practice, including Arbitration &amp; Dispute Resolution; Banking, Finance &amp; Insurance; Broadcasting, Telecom &amp; Media Laws; Competition Law; Corporate &amp; Commercial Law; Electricity &amp; Energy Laws; Environment Laws; Intellectual Property Laws; Insolvency &amp; Bankruptcy; Labour &amp; Employment Laws; Civil, Commercial &amp; Criminal Litigation; Mergers &amp; Acquisitions; Property &amp; Real Estate; and Tax Litigation. This breadth allows the Firm to approach complex matters from multiple legal and commercial perspectives and to provide clients with integrated advice across their evolving requirements.
+      </p>
+      <p>
+        Among these areas, the Firm has developed particular strength in Arbitration &amp; Dispute Resolution, Intellectual Property Law and Banking, Finance &amp; Insurance. Its dispute-resolution practice encompasses arbitration, commercial disputes and related court proceedings, while its Intellectual Property practice covers the protection, prosecution, management and enforcement of intellectual property rights, including patents, trademarks, copyrights and designs. The Firm's Banking, Finance &amp; Insurance practice further extends its expertise to financial and regulatory matters, including banking transactions, finance, securitisation, recovery proceedings and insurance-related disputes.
+      </p>
+      <p>
+        The Firm is led by Founding &amp; Managing Partner Sagar Chauhan, alongside Senior Partner Rohit Kathuria and Partners Sanjay Kumar Yadav and Dhruv Varma, supported by a dedicated team of Associates and legal professionals whose collective experience spans civil, commercial, criminal, constitutional, regulatory and specialised areas of legal practice. Together, the leadership team brings a broad range of experience to the Firm while retaining the personal attention, accessibility and commitment that have shaped its practice from the outset.
+      </p>
+    </div>
+
+    <!-- Pull quote -->
+    <div class="firm-quote">
+      <img src="assets/images/logo.svg" alt="Axis Law Offices logo" loading="lazy">
+      <p>
+        "Dedicated to delivering the best possible legal solutions,<br>individually tailored to each client's requirements."
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -161,21 +242,11 @@
       <div class="gold-rule gold-rule--center" aria-hidden="true"></div>
     </div>
 
-    <div class="grid-3" role="list">
+    <div class="why-grid" role="list">
       <div style="text-align:center; padding: 32px 24px; border: 1px solid rgba(176,141,87,0.25); border-radius: 4px;" role="listitem">
         <div style="font-size: 2rem; color: var(--gold); margin-bottom: 16px;" aria-hidden="true">&#9878;</div>
         <h3 style="color:var(--white); margin-bottom: 10px;">Senior-Led Practice</h3>
         <p style="color:rgba(255,255,255,0.65); font-size:0.9rem;">Every matter is supervised and handled by a senior counsel — no delegation to junior associates without oversight.</p>
-      </div>
-      <div style="text-align:center; padding: 32px 24px; border: 1px solid rgba(176,141,87,0.25); border-radius: 4px;" role="listitem">
-        <div style="font-size: 2rem; color: var(--gold); margin-bottom: 16px;" aria-hidden="true">&#127757;</div>
-        <h3 style="color:var(--white); margin-bottom: 10px;">Pan-India Reach</h3>
-        <p style="color:rgba(255,255,255,0.65); font-size:0.9rem;">Active representation in Delhi, Mumbai, Chandigarh, Lucknow, Gurgaon, and Allahabad. Courts, tribunals, and regulatory bodies nationwide.</p>
-      </div>
-      <div style="text-align:center; padding: 32px 24px; border: 1px solid rgba(176,141,87,0.25); border-radius: 4px;" role="listitem">
-        <div style="font-size: 2rem; color: var(--gold); margin-bottom: 16px;" aria-hidden="true">&#128200;</div>
-        <h3 style="color:var(--white); margin-bottom: 10px;">PSU Track Record</h3>
-        <p style="color:rgba(255,255,255,0.65); font-size:0.9rem;">Proven experience representing major Public Sector Undertakings in high-value arbitration and litigation, including Power Grid, GAIL, and ONGC.</p>
       </div>
       <div style="text-align:center; padding: 32px 24px; border: 1px solid rgba(176,141,87,0.25); border-radius: 4px;" role="listitem">
         <div style="font-size: 2rem; color: var(--gold); margin-bottom: 16px;" aria-hidden="true">&#128203;</div>
@@ -196,37 +267,13 @@
   </div>
 </section>
 
-<!-- PAN INDIA PRESENCE -->
-<section class="section bg-cream" aria-labelledby="presence-heading">
-  <div class="container text-center">
-    <span class="section-label">Our Reach</span>
-    <h2 id="presence-heading">Pan-India Presence</h2>
-    <div class="gold-rule gold-rule--center" aria-hidden="true"></div>
-    <p class="lead" style="margin: 0 auto 44px;">
-      While headquartered in New Delhi, Axis Law Offices handles matters on a pan-India basis. Our counsel regularly appear on behalf of clients across the following cities and jurisdictions.
-    </p>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px;" role="list" aria-label="Cities where we practise">
-      <!-- City chips -->
-      <span role="listitem" style="background:var(--navy); color:var(--gold); padding:10px 24px; border-radius:40px; font-size:0.85rem; font-weight:600; letter-spacing:1px;">New Delhi</span>
-      <span role="listitem" style="background:var(--navy); color:var(--gold); padding:10px 24px; border-radius:40px; font-size:0.85rem; font-weight:600; letter-spacing:1px;">Mumbai</span>
-      <span role="listitem" style="background:var(--navy); color:var(--gold); padding:10px 24px; border-radius:40px; font-size:0.85rem; font-weight:600; letter-spacing:1px;">Chandigarh</span>
-      <span role="listitem" style="background:var(--navy); color:var(--gold); padding:10px 24px; border-radius:40px; font-size:0.85rem; font-weight:600; letter-spacing:1px;">Lucknow</span>
-      <span role="listitem" style="background:var(--navy); color:var(--gold); padding:10px 24px; border-radius:40px; font-size:0.85rem; font-weight:600; letter-spacing:1px;">Gurgaon</span>
-      <span role="listitem" style="background:var(--navy); color:var(--gold); padding:10px 24px; border-radius:40px; font-size:0.85rem; font-weight:600; letter-spacing:1px;">Allahabad</span>
-    </div>
-    <div class="mt-40">
-      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/images/logo.svg" alt="Axis Law Offices" class="footer-logo" loading="lazy">
-        <p>A full-service law firm headquartered in New Delhi, committed to delivering principled, client-centric legal counsel across India.</p>
+        <p>Headquartered in New Delhi, we are a full-service law firm committed to providing principled, strategic and commercially astute legal counsel, tailored to the evolving needs of our clients across India.</p>
       </div>
       <div class="footer-nav">
         <p class="footer-heading">Quick Links</p>

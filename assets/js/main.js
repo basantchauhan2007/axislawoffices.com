@@ -72,6 +72,33 @@
     });
   }
 
+  /* ── Disclaimer Gate (home page only) ── */
+  const disclaimer = document.getElementById('disclaimer-overlay');
+  if (disclaimer) {
+    const agreeBtn = document.getElementById('disclaimer-agree');
+    const declineBtn = document.getElementById('disclaimer-decline');
+    const box = document.getElementById('disclaimer-box');
+
+    if (agreeBtn) {
+      agreeBtn.addEventListener('click', () => {
+        try { localStorage.setItem('alo-disclaimer-accepted', 'yes'); } catch (e) {}
+        disclaimer.style.display = 'none';
+        document.documentElement.style.overflow = '';
+      });
+    }
+    if (declineBtn && box) {
+      declineBtn.addEventListener('click', () => {
+        box.classList.add('disclaimer-declined');
+        box.innerHTML =
+          '<h2>You cannot access the site</h2>' +
+          '<div class="gold-rule gold-rule--center" aria-hidden="true"></div>' +
+          '<p>Access to this website requires acceptance of the Disclaimer, the Terms of Use ' +
+          'and the Privacy Policy. You may reach us directly at ' +
+          '<a href="mailto:legal@axislawoffices.com" style="color:var(--gold);">legal@axislawoffices.com</a>.</p>';
+      });
+    }
+  }
+
   /* ── Contact Form ── */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
